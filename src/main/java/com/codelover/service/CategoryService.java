@@ -8,6 +8,18 @@ public interface CategoryService {
 	
 	public Boolean saveCategory(Category category);
 	
+<<<<<<< Updated upstream
 	public List<Category> GetAllCategory();
+=======
+	public List<CategoryDto> getAllCategory();
+
+	public List<CategoryReponse> getActiveCategory();
+
+	public CategoryDto getCategoryById(Integer id);
+
+	public Boolean deleteCategory(Integer id);
+	
+	 
+>>>>>>> Stashed changes
 	
 }
