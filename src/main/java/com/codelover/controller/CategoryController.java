@@ -65,5 +65,6 @@ public class CategoryController {
 			return new ResponseEntity<>(allCategory,HttpStatus.OK);
 		}
 	}
+	
 
 }

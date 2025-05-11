@@ -50,7 +50,7 @@ public class CategoryServiceImpl implements CategoryService{
 		List<Category> categories = categoryRepo.findAll();
 		
 		List<CategoryDto> categoryDtoList = categories.stream()
-		.map(cat ->mapper.map(categories, CategoryDto.class)).toList();
+		.map(cat ->mapper.map(cat, CategoryDto.class)).toList();
 		return categoryDtoList;
 	}
 
