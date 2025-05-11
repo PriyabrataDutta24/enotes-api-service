@@ -1,11 +1,5 @@
-package com.codelover.entity;
+package com.codelover.dto;
 
-import java.util.Date;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,30 +9,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Category extends BaseModel{
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CategoryReponse {
+	
 	private Integer id;
 	
 	private String name;
 	
 	private String description;
 
-	public void setIsDeleted(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setCreatedBy(int i) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setCreatedOn(Date date) {
-		// TODO Auto-generated method stub
-		
-	}
 	public Integer getId() {
 		return id;
 	}
@@ -62,6 +40,6 @@ public class Category extends BaseModel{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-
+	
+	
 }

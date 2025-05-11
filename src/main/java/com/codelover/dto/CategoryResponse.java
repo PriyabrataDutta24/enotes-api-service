@@ -1,16 +1,24 @@
-package com.codelover.entity;
+package com.codelover.dto;
 
 import java.util.Date;
 
-import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@MappedSuperclass
-public class BaseModel {
-
+@AllArgsConstructor
+@NoArgsConstructor
+public class CategoryResponse {
+	
+	private Integer id;
+	
+	private String name;
+	
+	private String description;
+	
 	private Boolean isActive;
 	
 	private Boolean isDeleted;
@@ -23,6 +31,29 @@ public class BaseModel {
 	
 	private Date updatedOn;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	public Boolean getIsActive() {
 		return isActive;
@@ -71,5 +102,6 @@ public class BaseModel {
 	public void setUpdatedOn(Date updatedOn) {
 		this.updatedOn = updatedOn;
 	}
-
+	
+	
 }
